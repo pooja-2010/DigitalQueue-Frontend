@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QueueFlow - Digital Queue Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            Queue<span>Flow</span>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#join">Join Queue</a>
+            <a href="#status">Queue Status</a>
+            <a href="/admin.html">Admin</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">SMART • SIMPLE • DIGITAL</p>
+
+                <h1>
+                    Skip the wait.<br>
+                    <span>Join the queue digitally.</span>
+                </h1>
+
+                <p class="hero-text">
+                    A smart queue management system that helps customers
+                    join, track and manage their queue without standing in line.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#join" class="primary-btn">
+                        Join Queue
+                    </a>
+
+                    <a href="#status" class="secondary-btn">
+                        Check Queue Status
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="queue-card">
+
+                <div class="card-header">
+                    <div>
+                        <p>NOW SERVING</p>
+                        <h2 id="currentToken">A-024</h2>
+                    </div>
+
+                    <div class="live">
+                        <span></span> LIVE
+                    </div>
+                </div>
+
+                <div class="queue-info">
+
+                    <div>
+                        <small>People Waiting</small>
+                        <strong id="waitingCount">12</strong>
+                    </div>
+
+                    <div>
+                        <small>Average Wait</small>
+                        <strong>15 min</strong>
+                    </div>
+
+                </div>
+
+                <div class="progress">
+                    <div></div>
+                </div>
+
+                <p class="status-text">
+                    Your queue is moving smoothly.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature">
+                <div class="icon">🎫</div>
+                <h3>Digital Token</h3>
+                <p>Get your token instantly without standing in line.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">📱</div>
+                <h3>Live Tracking</h3>
+                <p>Track your position and know when your turn is near.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">⚡</div>
+                <h3>Faster Service</h3>
+                <p>Reduce waiting time and improve service efficiency.</p>
+            </div>
+
+        </section>
+
+
+        <section id="join" class="join-section">
+
+            <div class="section-heading">
+                <p class="tagline">GET YOUR TOKEN</p>
+
+                <h2>Join the Queue</h2>
+
+                <p>
+                    Enter your details and receive your digital token.
+                </p>
+            </div>
+
+
+            <div class="form-card">
+
+                <div class="input-group">
+                    <label for="customerName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="serviceType">
+                        Select Service
+                    </label>
+
+                    <select id="serviceType">
+
+                        <option value="General">
+                            General Service
+                        </option>
+
+                        <option value="Consultation">
+                            Consultation
+                        </option>
+
+                        <option value="Billing">
+                            Billing
+                        </option>
+
+                        <option value="Support">
+                            Customer Support
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="primary-btn full"
+                    onclick="joinQueue()"
+                >
+                    Get My Token
+                </button>
+
+            </div>
+
+
+            <div id="tokenResult" class="token-result hidden">
+
+                <p>Your Digital Token</p>
+
+                <h2 id="newToken">A-025</h2>
+
+                <p>
+                    Please wait for your turn.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="status" class="status-section">
+
+            <div class="section-heading">
+
+                <p class="tagline">REAL-TIME STATUS</p>
+
+                <h2>Queue Status</h2>
+
+            </div>
+
+            <div class="status-card">
+
+                <div>
+                    <small>Currently Serving</small>
+                    <strong id="statusServing">A-024</strong>
+                </div>
+
+                <div>
+                    <small>People Waiting</small>
+                    <strong id="statusWaiting">12</strong>
+                </div>
+
+                <div>
+                    <small>Estimated Wait</small>
+                    <strong>15 min</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            Queue<span>Flow</span>
+        </div>
+
+        <p>
+            Digital Queue Management System
+        </p>
+
+        <p class="copyright">
+            © 2026 QueueFlow. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
